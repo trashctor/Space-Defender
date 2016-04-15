@@ -8,7 +8,7 @@ var SpaceDefender = React.createClass({
 	},
 
 	componentDidMount: function () {
-		var canvasEl = $("#canvas")[0];
+		var canvasEl = $("#space-defender-canvas")[0];
 		window.SpaceDefender = {};
 		this.game = window.SpaceDefender.game = new Game(canvasEl);
 	},
@@ -27,39 +27,51 @@ var SpaceDefender = React.createClass({
 				this.setState({ current: "GAME_OVER" });
 			}
 		}.bind(this), 1000);
+
+		$("#space-defenders-title")[0].style.visibility = "hidden";
 	},
 
 	_handleMenu: function () {
 		this.game.stop();
 		this.setState({ current: "MENU" });
+		$("#space-defenders-title")[0].style.visibility = "visible";
 	},
 
 	render: function () {
 		switch(this.state.current) {
 			case "MENU":
 				return (
-					<button id="start-game" onClick={this._handleNewGame}>
-						Start Game
-					</button>
+					<div id="react-content-main">
+						<h1 id="space-defenders-title">Space Defender</h1>
+						<button id="start-game-button" onClick={this._handleNewGame}>
+							Start Game
+						</button>
+					</div>
 				);
 			case "NEW_GAME":
 				return (
-					<div id="select-players">
-						<button id="one-player" onClick={this._startGame.bind(this, false)}>
-							One Player
-						</button>
-						<button id="two-player" onClick={this._startGame.bind(this, true)}>
-							Two Player
-						</button>
+					<div id="react-content-main">
+						<h1 id="space-defenders-title">Space Defender</h1>
+						<div id="select-players" className="group">
+							<button id="one-player-button" onClick={this._startGame.bind(this, false)}>
+								One Player
+							</button>
+							<button id="two-player-button" onClick={this._startGame.bind(this, true)}>
+								Two Player
+							</button>
+						</div>
 					</div>
 				);
 			case "LOOPING":
 				return null;
 			case "GAME_OVER":
 				return (
-					<button id="menu-button" onClick={this._handleMenu}>
-						Menu
-					</button>
+					<div id="react-content-main">
+						<h1 id="game-over-title">Game Over</h1>
+						<button id="menu-button" onClick={this._handleMenu}>
+							Menu
+						</button>
+					</div>
 				);
 			default:
 				throw "Unknown render state in SpaceDefender!";
@@ -68,5 +80,5 @@ var SpaceDefender = React.createClass({
 });
 
 $(function () {
-	ReactDOM.render(<SpaceDefender/>, $("#react-content")[0]);
+	ReactDOM.render(<SpaceDefender/>, $("#react-content-dom")[0]);
 });

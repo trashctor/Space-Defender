@@ -1,4 +1,152 @@
-#canvas {
+html, body, header, nav, h1, a, ul, li,
+strong, main, section, img, div, h2, p,
+form, fieldset, label, input, textarea,
+button, article, footer, small {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	outline: 0px;
+
+	font: inherit;
+	background: transparent;
+	color: inherit;
+
+	box-sizing: inherit;
+	text-decoration: inherit;
+	text-align: inherit;
+	vertical-align: inherit;
+}
+
+.group:after {
+	content: "";
 	display: block;
+	clear: both;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+
+	background: #aaaaaa;
+}
+
+#space-defender-game {
+	position: relative;
+	width: 640px;
+	height: 720px;
 	margin: auto;
+}
+
+#react-content-main {
+	top: 70px;
+	left:	70px;
+	width: 500px;
+	position: absolute;
+}
+
+#space-defenders-title {
+	display: block;
+	font-size: 36px;
+	font-weight: bold;
+	top: 35px;
+	left: 145px;
+	width: 350px;
+	text-align: center;
+	margin: auto;
+	color: #d9d9d9;
+	margin-bottom: 50px;
+}
+
+#start-game-button {
+	display: block;
+	color: #d9d9d9;
+	background: #3079ed;
+	font-weight: bold;
+	margin: auto;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+#start-game-button:hover {
+	cursor: pointer;
+	background: #1643e0;
+}
+
+#select-players {
+	width: 240px;
+	margin: auto;
+}
+
+#one-player-button {
+	display: block;
+	float: left;
+	color: #d9d9d9;
+	background: #3079ed;
+	font-weight: bold;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+#one-player-button:hover {
+	cursor: pointer;
+	background: #1643e0;
+}
+
+#two-player-button {
+	display: block;
+	float: right;
+	color: #d9d9d9;
+	background: #3079ed;
+	font-weight: bold;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+#two-player-button:hover {
+	cursor: pointer;
+	background: #1643e0;
+}
+
+#game-over-title {
+	display: block;
+	font-size: 36px;
+	font-weight: bold;
+	top: 35px;
+	left: 145px;
+	width: 350px;
+	text-align: center;
+	margin: auto;
+	color: #d9d9d9;
+	margin-bottom: 50px;
+}
+
+#menu-button {
+	display: block;
+	color: #d9d9d9;
+	background: #3079ed;
+	font-weight: bold;
+	margin: auto;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+#menu-button:hover {
+	cursor: pointer;
+	background: #1643e0;
+}
+
+#space-defender-canvas {
+	display: block;
 }
