@@ -27,14 +27,11 @@ var SpaceDefender = React.createClass({
 				this.setState({ current: "GAME_OVER" });
 			}
 		}.bind(this), 1000);
-
-		$("#space-defenders-title")[0].style.visibility = "hidden";
 	},
 
 	_handleMenu: function () {
 		this.game.stop();
 		this.setState({ current: "MENU" });
-		$("#space-defenders-title")[0].style.visibility = "visible";
 	},
 
 	render: function () {
