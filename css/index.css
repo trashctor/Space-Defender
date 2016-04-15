@@ -23,11 +23,91 @@ button, article, footer, small {
 	clear: both;
 }
 
+ul {
+	list-style: none;
+}
+
 body {
 	width: 100%;
 	height: 100%;
+	font-family: sans-serif;
 
 	background: #aaaaaa;
+}
+
+#space-defender-main {
+	padding: 25px;
+	position: relative;
+}
+
+#player-1-controls {
+	top: 50px;
+	left: 25px;
+	position: absolute;
+	z-index: -1;
+	/*border-radius: 10px;
+	overflow: hidden;*/
+}
+
+#player-1-header {
+	color: #063555;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#player-1-keys {
+	float: left;
+	width: 225px;
+}
+
+#player-1-keys > li {
+	background: #063555;
+	float: left;
+	width: 75px;
+	height: 75px;
+	box-sizing: border-box;
+	border: 1px solid #aaaaaa;
+	color: #aaaaaa;
+	font-size: 24px;
+	line-height: 35px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#player-2-controls {
+	top: 50px;
+	right: 25px;
+	position: absolute;
+	z-index: -1;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+#player-2-header {
+	color: #014413;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#player-2-keys {
+	float: right;
+	width: 225px;
+}
+
+#player-2-keys > li {
+	background: #014413;
+	float: left;
+	width: 75px;
+	height: 75px;
+	box-sizing: border-box;
+	border: 1px solid #aaaaaa;
+	color: #aaaaaa;
+	font-size: 24px;
+	line-height: 35px;
+	text-align: center;
+	border-radius: 10px;
 }
 
 #space-defender-game {
