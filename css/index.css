@@ -75,6 +75,12 @@ body {
 	border-radius: 10px;
 }
 
+#key-w-t div:nth-child(1n+2), #key-a-f div:nth-child(1n+2), #key-s-g div:nth-child(1n+2), #key-d-h div:nth-child(1n+2) {
+	line-height: 15px;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
 #player-2-controls {
 	top: 50px;
 	right: 25px;
